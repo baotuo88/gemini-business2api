@@ -162,9 +162,17 @@
                 <rect class="logo-eye" x="81" y="68" width="14" height="4" rx="1" />
               </g>
             </svg>
-            <h2 class="text-xl font-semibold text-foreground lg:text-2xl">
-              {{ currentPageTitle }}
-            </h2>
+            <div class="flex min-w-0 items-center gap-2">
+              <h2 class="truncate text-xl font-semibold text-foreground lg:text-2xl">
+                {{ currentPageTitle }}
+              </h2>
+              <span
+                v-if="sidebarVersionLabel"
+                class="ui-chip shrink-0 px-2.5 py-1 text-[11px] text-muted-foreground"
+              >
+                {{ sidebarVersionLabel }}
+              </span>
+            </div>
           </div>
           <div class="flex flex-wrap items-center gap-3">
             <span class="ui-chip px-2.5 py-1 text-[11px] text-muted-foreground">
